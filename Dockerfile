@@ -7,7 +7,7 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 # cat setup.sh | grep -v 'bash "$STARTUPPATH/startup.sh" $PORT' > install.sh
 # basically just removes the startup line and rename the new file to install.sh
 
-RUN git clone https://github.com/tableau/TabPy.git && \
+RUN git clone https://github.com/BazaarvoiceBizTech/TabPy.git && \
 	cd TabPy && \
 	cat setup.sh | grep -v 'bash "$STARTUPPATH/startup.sh" $PORT' > install.sh && \
 	/bin/bash -c "source install.sh"
