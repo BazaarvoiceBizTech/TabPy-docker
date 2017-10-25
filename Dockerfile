@@ -12,6 +12,8 @@ RUN git clone https://github.com/BazaarvoiceBizTech/TabPy.git && \
 	cat setup.sh | grep -v 'bash "$STARTUPPATH/startup.sh" $PORT' > install.sh && \
 	/bin/bash -c "source install.sh"
 
+RUN git clone https://github.com/BazaarvoiceBizTech/bv_tools.git
+
 RUN source activate Tableau-Python-Server && \
 	pip install --upgrade pip && \
 	pip install numpy pandas scikit-learn==0.17.1 scipy textblob nltk vaderSentiment && \
